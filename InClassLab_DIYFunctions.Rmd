@@ -1,6 +1,6 @@
 ---
 title: "In Class Lab - DIY Functions"
-author: "Dr. Shoemaker"
+author: "Brenda Luis"
 date: "DATA 2401"
 output: html_document
 ---
@@ -16,7 +16,10 @@ The questions from your notes today are below, please copy your answers them her
 1. Write your own function that takes the temperature in Fahrenheit as an argument and returns the Celcius equivalent. 
 
 ```{R}
-
+fahrenheit_to_celcius <- function(fahrenheit) {
+  (fahrenheit-32) * (5/9)
+}
+fahrenheit_to_celcius(212)
 
 ```
 
@@ -24,7 +27,15 @@ The questions from your notes today are below, please copy your answers them her
 
 
 ```{r}
+temp_dist_conversion <- function(fahrenheit, feet) {
+  celcius <- ((fahrenheit-32) * (5/9))
+  meters <- (feet/3.281)
+  
+  conversions <- c(celcius, meters)
+  conversions 
+}
 
+temp_dist_conversion(212, 32)
 
 ```
 
@@ -32,7 +43,17 @@ The questions from your notes today are below, please copy your answers them her
 3. Write a function that prints out a statement of whether the number passed as an argument is positive, negative or 0. 
 
 ```{R}
+pos_or_neg <- function(num) {
+  if (num > 0) {
+    print("Postitive number")
+  } else if (num == 0){
+    print("Number is 0")
+  } else {
+    print("Negative number")
+  }
+}
 
+pos_or_neg(1)
 
 ```
 
@@ -40,7 +61,15 @@ The questions from your notes today are below, please copy your answers them her
    + Don't use `abs()`. Use the flow from problem 1 and multiply by negative one as necessary. 
    
 ```{r}
+abs_val <- function(num) {
+  if (num < 0){
+    return(num*-1)
+  } else {
+    return(num)
+  }
+}
 
+abs_val(-212)
 
 ```
 
