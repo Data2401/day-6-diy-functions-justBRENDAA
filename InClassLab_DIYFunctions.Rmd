@@ -53,7 +53,10 @@ pos_or_neg <- function(num) {
   }
 }
 
-pos_or_neg(1)
+pos_or_neg(121)
+pos_or_neg(-212)
+pos_or_neg(0)
+
 
 ```
 
@@ -70,6 +73,8 @@ abs_val <- function(num) {
 }
 
 abs_val(-212)
+abs_val(121)
+abs_val(0)
 
 ```
 
@@ -80,7 +85,7 @@ abs_val(-212)
 
 abs_val_v2 <- function(num) {
   if (!is.numeric(num)){
-    return("Please pass  numerical value to this function")
+    return("Please pass a numerical value to this function")
   }
   
   if (num < 0){

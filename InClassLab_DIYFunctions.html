@@ -404,8 +404,12 @@ passed as an argument is positive, negative or 0.</li>
   }
 }
 
-pos_or_neg(1)</code></pre>
+pos_or_neg(121)</code></pre>
 <pre><code>## [1] &quot;Postitive number&quot;</code></pre>
+<pre class="r"><code>pos_or_neg(-212)</code></pre>
+<pre><code>## [1] &quot;Negative number&quot;</code></pre>
+<pre class="r"><code>pos_or_neg(0)</code></pre>
+<pre><code>## [1] &quot;Number is 0&quot;</code></pre>
 <ol start="4" style="list-style-type: decimal">
 <li>Write a function that returns the absolute value of the number
 passed as an argument.
@@ -424,6 +428,10 @@ multiply by negative one as necessary.</li>
 
 abs_val(-212)</code></pre>
 <pre><code>## [1] 212</code></pre>
+<pre class="r"><code>abs_val(121)</code></pre>
+<pre><code>## [1] 121</code></pre>
+<pre class="r"><code>abs_val(0)</code></pre>
+<pre><code>## [1] 0</code></pre>
 <ol start="5" style="list-style-type: decimal">
 <li>Hard mode: add an error check to that function that prints out the
 string “Please pass a numerical value to this function” if the user
@@ -436,7 +444,7 @@ relevant here</li>
 </ol>
 <pre class="r"><code>abs_val_v2 &lt;- function(num) {
   if (!is.numeric(num)){
-    return(&quot;Please pass  numerical value to this function&quot;)
+    return(&quot;Please pass a numerical value to this function&quot;)
   }
   
   if (num &lt; 0){
@@ -451,7 +459,7 @@ abs_val_v2(121)</code></pre>
 <pre class="r"><code>abs_val_v2(-212)</code></pre>
 <pre><code>## [1] 212</code></pre>
 <pre class="r"><code>abs_val_v2(&quot;two hundred&quot;)</code></pre>
-<pre><code>## [1] &quot;Please pass  numerical value to this function&quot;</code></pre>
+<pre><code>## [1] &quot;Please pass a numerical value to this function&quot;</code></pre>
 <p>```</p>
 </div>
 
