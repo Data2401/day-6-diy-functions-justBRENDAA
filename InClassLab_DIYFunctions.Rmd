@@ -78,16 +78,22 @@ abs_val(-212)
    
 ```{r}
 
+abs_val_v2 <- function(num) {
+  if (!is.numeric(num)){
+    return("Please pass  numerical value to this function")
+  }
+  
+  if (num < 0){
+    return(num*-1)
+  } else {
+    return(num)
+  }
+}
 
+abs_val_v2(121)
+abs_val_v2(-212)
+abs_val_v2("two hundred")
 
 ```
-   
-   
-
-
-
-
-
-
 ```
 
